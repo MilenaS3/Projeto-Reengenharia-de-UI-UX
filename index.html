@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Chrome for Testing availability (UX Updated)</title>
+  <meta content="width=device-width" name="viewport">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img alt="Logo" height="48" src="logo.svg" width="48" onerror="this.style.display='none'">
+    <h1>Chrome for Testing</h1>
+  </header>
+
+  <section class="hero">
+    <h2><span class="badge badge-stable">Stable</span> Versão Atual Recomendada</h2>
+    <p>Versão: <strong>149.0.7827.22</strong> | Revisão: <code>r1625079</code></p>
+    <p>Utilize esta versão para a maioria dos testes automatizados. Os binários foram validados para estabilidade.</p>
+  </section>
+
+  <div class="controls-container">
+    <div class="control-group">
+      <label>Sistema Operacional</label>
+      <div class="filters" id="os-filters">
+        <button class="filter-btn active" data-os="all">Todos</button>
+        <button class="filter-btn" data-os="win">Windows</button>
+        <button class="filter-btn" data-os="mac">macOS</button>
+        <button class="filter-btn" data-os="linux">Linux</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Canal de Lançamento</label>
+      <div class="filters" id="version-filters">
+        <button class="filter-btn active" data-version="all">Todas as Versões</button>
+        <button class="filter-btn" data-version="stable">Stable</button>
+        <button class="filter-btn" data-version="beta">Beta</button>
+        <button class="filter-btn" data-version="dev">Dev</button>
+        <button class="filter-btn" data-version="canary">Canary</button>
+      </div>
+    </div>
+
+    <div class="control-group" style="margin-left: auto;">
+      <label for="sort-select">Ordenar por Revisão</label>
+      <select id="sort-select" class="sort-select">
+        <option value="desc">Mais Recente (Maior Número)</option>
+        <option value="asc">Mais Antiga (Menor Número)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="grid" id="cards-container">
+
+    <div class="card" data-os="linux" data-version="stable" data-revision="1625079">
+      <div class="card-header">
+        <div><h3>Linux (linux64)</h3><p>149.0.7827.22 (r1625079)</p></div>
+        <span class="badge badge-stable">Stable</span>
+      </div>
+      <div class="file-group">
+        <span class="file-name">chrome</span>
+        <div class="actions">
+          <button class="btn-copy" data-url="https://storage.googleapis.com/chrome-for-testing-public/149.0.7827.22/linux64/chrome-linux64.zip" title="Copiar Link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+          <a href="https://storage.googleapis.com/chrome-for-testing-public/149.0.7827.22/linux64/chrome-linux64.zip" class="btn-download">Download</a>
+        </div>
+      </div>
+      <div class="file-group">
+        <span class="file-name">chromedriver</span>
+        <div class="actions">
+          <button class="btn-copy" data-url="https://storage.googleapis.com/chrome-for-testing-public/149.0.7827.22/linux64/chromedriver-linux64.zip" title="Copiar Link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+          <a href="https://storage.googleapis.com/chrome-for-testing-public/149.0.7827.22/linux64/chromedriver-linux64.zip" class="btn-download">Download</a>
+        </div>
+      </div>
+      <div class="file-group">
+        <span class="file-name">chrome-headless-shell</span>
+        <div class="actions">
+          <button class="btn-copy" data-url="https://storage.googleapis.com/chrome-for-testing-public/149.0.7827.22/linux64/chrome-headless-shell-linux64.zip" title="Copiar Link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+          <a href="https://storage.googleapis.com/chrome-for-testing-public/149.0.7827.22/linux64/chrome-headless-shell-linux64.zip" class="btn-download">Download</a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
